@@ -1,0 +1,79 @@
+;Le nom du dossier du theme et le nom du fichier info doivent etre identiques.
+;Uniquement en minuscules et avec des underscores
+name = ERostand_Cyrano_D7
+description = Theme E.Rostand pour Drupal 7.Inspired by Basic.
+screenshot = screenshot.png
+core = "7.x"
+;project = "PF"
+engine = phptemplate
+
+;regions[page_top] = Page top (D7)
+;regions[header] = Header (D7)
+;regions[highlight] = Highlight (D7)
+;regions[help] = Help (D7)
+regions[content] = Content (D7)
+;regions[sidebar_first] = First sidebar (D7)
+;regions[sidebar_second] = Second sidebar (D7)
+;regions[footer] = Footer (D7)
+;regions[page_bottom] = Page bottom
+
+;Reprise des regions de D6 ( à voir si utile)
+;regions[header] = Header (D6)
+regions[site_slogan] = Slogan du site (D6)
+regions[search_box] = Search box (D6)
+regions[menu_dyn] = Menu Header - Nice Menu (D6)
+regions[navStatic] = Navigation par images - Bloc (D6)
+regions[DiapoHP] = Diaporama Homepage - Bloc (D6)
+regions[HPBasGauche] = Zone Bas Gauche HP - Bloc (D6)
+regions[HPBasDroit] = Zone Bas Droit HP - Bloc (D6)
+regions[content_top] = Content top (D6)
+regions[formulaire] = Zone formulaire bloc (D6)
+regions[left] = Colonne Gauche (D6)
+regions[decoTitre] = Titre deco image - Fiche Formations (D6)
+regions[right] = Colonne Droite (D6)
+regions[centralBloc] = Zone pour bloc central - View Bloc (D6)
+regions[content_bottom] = Content bottom (D6)
+regions[content_bottom_home] = Content bottom homepage (D6)
+regions[footer] = Footer (D6)
+;Regions pour la page actu
+regions[sortie_action] = Zone pour les sorties/actions - Vue bloc (D6)
+regions[actuAssociation] = Zone pour RSS issu du site PF - Vue Bloc RSS (D6)
+regions[projets] = Zone pour les projets - Vue Bloc (D6)
+regions[intervenants] = Zone pour les Intervenants - Vue Bloc (D6)
+;Region pour formulaire (D6)
+regions[formulaire] = Formulaire (centre) - Webform Bloc (D6)
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+stylesheets[all][] = css/css-d7/default.css
+stylesheets[all][] = css/css-d7/layout.css
+stylesheets[all][] = css/css-d7/style.css
+stylesheets[print][] = css/css-d7/print.css
+stylesheets[print][] = css/css-d7/reset.css
+; Reprise des CSS du theme D6
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/webform.css
+stylesheets[all][] = css/layout-home.css
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/global.css
+stylesheets[all][] = css/nice_menus_custom.css
+stylesheets[all][] = css/nice_menu_down-horiz-children.css
+stylesheets[all][] = css/nice_menus_default.css
+stylesheets[all][] = css/style-backoffice.css
+stylesheets[all][] = css/search.css
+stylesheets[all][] = css/maintenance.css
+
+settings[basic_tabs] = 1
+settings[basic_breadcrumb_separator] = »
+settings[wireframe_mode] = 0
+settings[clear_registry] = 0
+
+
