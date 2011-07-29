@@ -10,18 +10,19 @@ engine = phptemplate
 ;regions[page_top] = Page top (D7)
 ;regions[header] = Header (D7)
 ;regions[highlight] = Highlight (D7)
-;regions[help] = Help (D7)
+regions[help] = Help (D7)
 regions[content] = Content (D7)
 ;regions[sidebar_first] = First sidebar (D7)
 ;regions[sidebar_second] = Second sidebar (D7)
 ;regions[footer] = Footer (D7)
 ;regions[page_bottom] = Page bottom
 
+
 ;Reprise des regions de D6 ( à voir si utile)
 ;regions[header] = Header (D6)
 regions[site_slogan] = Slogan du site (D6)
 regions[search_box] = Search box (D6)
-regions[menu_dyn] = Menu Header - Nice Menu (D6)
+regions[menu_dyn] = Menu Header - Menu dynamique (D6)
 regions[navStatic] = Navigation par images - Bloc (D6)
 regions[DiapoHP] = Diaporama Homepage - Bloc (D6)
 regions[HPBasGauche] = Zone Bas Gauche HP - Bloc (D6)
@@ -42,6 +43,18 @@ regions[projets] = Zone pour les projets - Vue Bloc (D6)
 regions[intervenants] = Zone pour les Intervenants - Vue Bloc (D6)
 ;Region pour formulaire (D6)
 regions[formulaire] = Formulaire (centre) - Webform Bloc (D6)
+
+;Theming de node - inclusion de regions
+regions[Colonne_C1] = Colonne C1 - Theming de node
+regions[Colonne_C2] = Colonne C2 - Theming de node
+regions[Colonne_C3] = Colonne C3 - Theming de node
+
+;Superfish Stuff - Pour utiliser Superfish
+
+;regions[superfish_menu] = Superfish Menu (D7)
+;stylesheets[all][] = css/superfish/superfish-navbar.css
+stylesheets[all][] = css/superfish/cyrano-superfish.css
+;scripts[]          = /sites/all/libraries/superfish/superfish.js
 
 features[] = logo
 features[] = name

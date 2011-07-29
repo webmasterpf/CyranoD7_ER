@@ -1,4 +1,5 @@
-<!--_____________  NODE.TPL BASIQUE _____________________ -->
+<!--_____________ /////////\\\\\\\\\\\_____________________ -->
+<!--_____________  NODE.TPL PAGE LYCEE _____________________ -->
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 	<div class="node-inner">
     <!-- ______________________ COLONNE C1 _______________________ -->
@@ -36,12 +37,15 @@ include ($theme_path.'/includes/inc_region_col_C1.php');
         print render($content['body']);
        ?>
   	
+
 <?php
 /* inclure des champs CCK dans le node selon http://robotlikehuman.com/web/printing-cck-content-field-values-drupal-7
  * Ce qui donne pour D7
  */
-print render($content['field_EXAMPLE']);
+print render($content['field_fichier_joint']);
 ?>
+
+
   	
     <?php if (!empty($content['links']['terms'])): ?>
       <div class="terms"><?php print render($content['links']['terms']); ?></div>
@@ -50,14 +54,24 @@ print render($content['field_EXAMPLE']);
     <?php if (!empty($content['links'])): ?>
 	    <div class="links"><?php print render($content['links']); ?></div>
 	  <?php endif; ?>
-</div> <!-- /colonne 2 --> 
+</div> <!-- /colonne 2 -->
          <!-- ______________________ COLONNE C3 _______________________ -->
        
            <div id="colonne-3" class="CHOIX_DU_LAYOUT">
+             <?php
+/* inclusion des termes de taxonomie associés
+ * Nouveau dans  D7 - choisir si affiche nom du vocabulaire ou pas
+ */
+print render($content['taxonomy_vocabulary_1']);
+?>
+
+
+
             <?php //region colonne C3
 global $theme_path;
 include ($theme_path.'/includes/inc_region_col_C3.php');
 ?>
+
         </div>
          
         

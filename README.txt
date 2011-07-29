@@ -3,10 +3,32 @@ Avril 2011 − Webmaster PF
 STARTER THEME DRUPAL 7
 −−−−−−−−−−−−−−−−−−−−−−−−−
 
-Thème basé sur Basic pour Druaple 7.
+Thème basé sur Basic pour Drupal 7.
 Permet le develeoppement des sites de PF avec Drupal 7.
 
+
+****************************** THEMING  **********************************************
+--------------------- INCLURE UNE REGION DANS UN TPL ----------------------------------------
+EXEMPLE:
+<?php if ($page['footer_icons']): ?>
+  <div class="footer-icons">
+    <?php print render($page['footer_icons']); ?>
+  </div> <!-- /.footer icons -->
+<?php endif; ?>
+---------------------- INCLURE CONTENU D4UN CHAMP CCK -----------------------------------------
+<?php
+/* inclure des champs CCK dans le node selon http://robotlikehuman.com/web/printing-cck-content-field-values-drupal-7
+ * Ce qui donne pour D7
+ */
+print render($content['field_EXAMPLE']);
+?>
+
+-----------------------
 Template suggestions:
+-----------------------
+29/07/11
+Plus besoin de créer un page-TDC.tpl , la surcharge du node.tpl suffit, si mise en page proche, sinon à tester
+
 What's a template suggestion? It's an alternate template (.tpl.php) file that you have created to override the base or original template file. Suggestions only work when they are placed in the same directory as the base templates.
 
 Custom suggestions beyond the ones listed below can be created. See the page Working with template suggestions.
@@ -109,11 +131,3 @@ search-result--[searchType].tpl.php
 base template: search-result.tpl.php
 The same as above but for individual search results.
 
-*********************************************************************************************
---------------------- INCLURE UNE REGION DANS UN TPL ----------------------------------------
-EXEMPLE:
-<?php if ($page['footer_icons']): ?>
-  <div class="footer-icons">
-    <?php print render($page['footer_icons']); ?>
-  </div> <!-- /.footer icons -->
-<?php endif; ?>

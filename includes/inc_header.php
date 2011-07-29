@@ -44,6 +44,8 @@
 
                   <br clear="all">
           <div id="menuHead">
+              
+
 	        <?php if (!empty($page ['menu_dyn'])): ?>
 			   <?php print render ($page ['menu_dyn']); ?>
             <?php endif; ?>

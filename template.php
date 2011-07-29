@@ -50,9 +50,9 @@ function cyrano_er_d7_preprocess_node(&$vars) {
  * http://www.victheme.com/blog/drupal-7-printing-block-region-nodetplphp
  */
         if ($blocks = block_get_blocks_by_region('region')) {
-      $vars['colonne_c1'] = $blocks;
-      $vars['colonne_c2'] = $blocks;
-      $vars['colonne_c3']['#region'] = 'Colonne C3 - Theming de node';
+      $vars['colonne_c1']['#region'] = 'Colonne_C1';
+      $vars['colonne_c2']['#region'] = 'Colonne_C2';
+      $vars['colonne_c3']['#region'] = 'Colonne_C3';
 
   }
 // Add a striping class.
@@ -208,4 +208,39 @@ function cyrano_er_d7_menu_local_tasks(&$variables) {
 
   return $output;
 
+}
+/*Ouvrir les liens des fielfield an blank avec D7 selon http://drupal.org/node/301234*/
+function cyrano_er_d7_file_link($variables) {
+  $file = $variables['file'];
+  $icon_directory = $variables['icon_directory'];
+
+  $url = file_create_url($file->uri);
+  $icon = theme('file_icon', array('file' => $file, 'icon_directory' => $icon_directory));
+
+  // Set options as per anchor format described at
+  // http://microformats.org/wiki/file-format-examples
+  $options = array(
+    'attributes' => array(
+      'type' => $file->filemime . '; length=' . $file->filesize,
+    ),
+  );
+
+  // Use the description as the link text if available.
+  if (empty($file->description)) {
+    $link_text = $file->filename;
+  }
+  else {
+    $link_text = $file->description;
+    $options['attributes']['title'] = check_plain($file->filename);
+  }
+
+  //open files of particular mime types in new window
+  $new_window_mimetypes = array('application/pdf','text/plain');
+  if (in_array($file->filemime, $new_window_mimetypes)) {
+    $options['attributes']['target'] = '_blank';
+    /*$options['attributes']['target'] = 'onclick="window.open(this.href); return false;"';*/
+
+  }
+
+  return '<span class="file">' . $icon . ' ' . l($link_text, $url, $options) . '</span>';
 }

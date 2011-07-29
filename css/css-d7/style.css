@@ -11,14 +11,14 @@ body {
 /* Links */
 /* line 11, ../sass/style.sass */
 a:link, a:visited {
-  color: blue;
+  color: none;
   text-decoration: none;
 }
 
 /* line 16, ../sass/style.sass */
 a:hover, a:active {
   color: red;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Titles. */

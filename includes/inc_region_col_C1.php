@@ -13,3 +13,8 @@ if ($page ['colonne_c1']): ?>
 </div>
     <?php endif; ?>
 <br clear="all"/>
+
+<?php  print $colonne_c1; ?>
+
+
+ <?php  print render ($page ['colonne_c1']); ?>
