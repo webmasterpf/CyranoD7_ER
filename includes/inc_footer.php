@@ -1,7 +1,7 @@
 <?php
 /* 
  * Le footer du site
- * Place en includes
+ * Placé en includes
  */
 
 ?>
@@ -11,5 +11,10 @@
       <?php print render($page['footer']); ?>
     </div> <!-- /footer -->
   <?php endif; ?>
-  <div id="bloc_stats"><?php include "js/code_stats.php";?></div>
+  <div id="bloc_stats">
+<?php
+  global $theme_path;
+  include ($theme_path.'/js/code_stats.php');
+  ?>
+</div>
     </div> <!-- /general OR /page -->
