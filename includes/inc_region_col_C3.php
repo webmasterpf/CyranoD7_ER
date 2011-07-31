@@ -6,7 +6,9 @@
 
 ?>
 <?php //regions pour inserer un bloc dans la colonne G3
-if ($page ['colonne_c3']): ?>
-    <?php  print render ($page ['colonne_c3']); ?>
+if ($Colonne_C3): ?>
+    <?php  print render ($Colonne_C3); ?>
 <?php endif; ?>
 <br clear="all"/>
+
+<p>LA REGION EXISTE colonne c3</p>

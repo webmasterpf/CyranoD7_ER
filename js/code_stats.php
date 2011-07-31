@@ -5,7 +5,7 @@
 <script type="text/javascript">
 <!--
 document.write('<a href="http://www.xiti.com/xiti.asp?s=471342" title="WebAnalytics">');
-Xt_param = 's=471342&p=<?php echo $head_title; ?>';
+Xt_param = 's=471342&p=<?php echo ($page ['head_title']); ?>';
 try {Xt_r = top.document.referrer;}
 catch(e) {Xt_r = document.referrer; }
 Xt_h = new Date();

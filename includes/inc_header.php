@@ -61,9 +61,5 @@
 
 
 	  </div> <!-- /header-inner -->
-          <?php if ($page['header']): ?>
-      <div id="header-region">
-        <?php print render($page['header']); ?>
-      </div>
-    <?php endif; ?>
+        
    </div> <!-- /header -->
