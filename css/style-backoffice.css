@@ -8,22 +8,30 @@
 
 
 /*----Navigation backoffice------*/
-#block-user-1{
+#block-system-navigation{
     background: url(../images/bg_nav_backoffice.gif) repeat scroll left top;
     padding: 0;
     margin: 0;
 }
-#block-user-1 a{
+#block-system-navigation .content a{
     color:#EB512F;
     text-decoration: none;
     background: white;
     padding: 0 2px;
 }
-#block-user-1 a:hover{
+#block-system-navigation a:hover{
     background: #EB512F;
     color: white;
 }
-#block-user-1{}
+#block-system-navigation{}
+.contextual-links-wrapper{}
+.contextual-links-wrapper a{
+    background: transparent;
+}
+.contextual-links-wrapper a:hover{}
+a.contextual-links-trigger{
+    background: transparent;
+}
 
 .item-list ul li {
 margin:0 0 0.25em 1.5em;

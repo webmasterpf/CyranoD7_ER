@@ -46,15 +46,7 @@ function cyrano_er_d7_preprocess_page(&$vars, $hook) {
 
 function cyrano_er_d7_preprocess_node(&$vars) {
   
-  /* Permettre l'ajout de regions dans les node.tpl pour le theming de node
- * http://www.victheme.com/blog/drupal-7-printing-block-region-nodetplphp
- */
-        if ($blocks = block_get_blocks_by_region('region')) {
-      $vars['colonne_c1']['#region'] = 'Colonne_C1';
-      $vars['colonne_c2']['#region'] = 'Colonne_C2';
-      $vars['colonne_c3']['#region'] = 'Colonne_C3';
-
-  }
+ 
 // Add a striping class.
   $vars['classes_array'][] = 'node-' . $vars['zebra'];
 }

@@ -1,15 +1,30 @@
 <!--_____________  NODE.TPL BASIQUE _____________________ -->
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 	<div class="node-inner">
-    <!-- ______________________ COLONNE C1 _______________________ -->
+   
       <?php /* choix du layout selon nombre de colonne
-         * .col1_layout_200_590_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
-         * .col2_layout_200_590_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
-         * .col3_layout_200_590_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
-         */?>
+         * .col1_layout_200_570_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
+         * .col2_layout_200_570_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
+         * .col3_layout_200_570_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
+       *
+       * Couleur des border de separation,sur la colonne 2
+       * .rouge-bleu
+       * .rose-bleu
+       * .noir-vert
+       * .bleu-violet
+       * .vert-violet
+   * Couleur des H1 de page :
+   * rouge
+   * orange
+   * vert
+   * bleu
+   * rose
+   * violet
+       *  */?>
+             <!-- ______________________ COLONNE C1 _______________________ -->
         <div id="colonne-1" class="CHOIX_DU_LAYOUT">
               <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
+                <h1 class="title bleu"><?php print $title; ?></h1>
               <?php endif; ?>
 	 <?php //region colonne C1
 global $theme_path;
@@ -28,7 +43,7 @@ include ($theme_path.'/includes/inc_region_col_C1.php');
       <span class="submitted"><?php print $date; ?> — <?php print $name; ?></span>
     <?php endif; ?>
 <!-- ______________________ COLONNE C2 _______________________ -->
- <div id="colonne-2" class="CHOIX_DU_LAYOUT">
+ <div id="colonne-2" class="CHOIX_DU_LAYOUT rose-bleu">
   	  <?php 
   	    // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
@@ -42,7 +57,12 @@ include ($theme_path.'/includes/inc_region_col_C1.php');
  */
 print render($content['field_EXAMPLE']);
 ?>
-  	
+
+           <?php //region colonne C2
+global $theme_path;
+include ($theme_path.'/includes/inc_region_col_C2.php');
+?>
+
     <?php if (!empty($content['links']['terms'])): ?>
       <div class="terms"><?php print render($content['links']['terms']); ?></div>
     <?php endif;?>

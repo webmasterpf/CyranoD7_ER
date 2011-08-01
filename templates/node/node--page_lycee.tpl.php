@@ -2,15 +2,31 @@
 <!--_____________  NODE.TPL PAGE LYCEE _____________________ -->
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 	<div class="node-inner">
-    <!-- ______________________ COLONNE C1 _______________________ -->
+  
       <?php /* choix du layout selon nombre de colonne
-         * .col1_layout_200_590_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
-         * .col2_layout_200_590_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
-         * .col3_layout_200_590_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
+         * .col1_layout_200_570_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
+         * .col2_layout_200_570_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
+         * .col3_layout_200_570_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
+       *
+       * Couleur des border de separation,sur la colonne 2
+       * .rouge-bleu
+       * .rose-bleu
+       * .noir-vert
+       * .bleu-violet
+       * .vert-violet
+       *
+       *    * Couleur des H1 de page :
+   * rouge
+   * orange
+   * vert
+   * bleu
+   * rose
+   * violet
          */?>
-        <div id="colonne-1" class="CHOIX_DU_LAYOUT">
+              <!-- ______________________ COLONNE C1 _______________________ -->
+        <div id="colonne-1" class="col1_layout_200_570_200">
               <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
+                <h1 class="title rouge"><?php print $title; ?></h1>
               <?php endif; ?>
 	 <?php //region colonne C1
 global $theme_path;
@@ -29,7 +45,7 @@ include ($theme_path.'/includes/inc_region_col_C1.php');
       <span class="submitted"><?php print $date; ?> — <?php print $name; ?></span>
     <?php endif; ?>
 <!-- ______________________ COLONNE C2 _______________________ -->
- <div id="colonne-2" class="CHOIX_DU_LAYOUT">
+ <div id="colonne-2" class="col2_layout_200_570_200 rouge-bleu">
   	  <?php 
   	    // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
@@ -57,7 +73,7 @@ print render($content['field_fichier_joint']);
 </div> <!-- /colonne 2 -->
          <!-- ______________________ COLONNE C3 _______________________ -->
        
-           <div id="colonne-3" class="CHOIX_DU_LAYOUT">
+           <div id="colonne-3" class="col3_layout_200_570_200">
              <?php
 /* inclusion des termes de taxonomie associés
  * Nouveau dans  D7 - choisir si affiche nom du vocabulaire ou pas

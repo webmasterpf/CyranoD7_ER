@@ -6,9 +6,9 @@
 
 ?>
 <?php //regions pour inserer un bloc dans la colonne C1
-if ($page ['Colonne_C1']): ?>
-<div id="region_col_G1">
-    <?php  print render ($page ['Colonne_C1']); ?>
+if (block_get_blocks_by_region('Colonne_C1')): ?>
+<div id="region_col_C1">
+    <?php  print render(block_get_blocks_by_region('Colonne_C1')); ?>
 </div>
     <?php endif; ?>
 <br clear="all"/>
