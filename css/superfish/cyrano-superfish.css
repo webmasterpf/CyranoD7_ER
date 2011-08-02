@@ -275,7 +275,7 @@ li.sfHover > a > .sf-sub-indicator {
   couleur du bg de la barre principale*/
   background:#EFEFEF;
     height: 41px;
-    padding: 10px 0 0 0;/*si a=150px alors 5px 0 5px 0*/
+    padding: 7px 0 3px 0;/*si a=150px alors 5px 0 5px 0*/
     position: relative;
     width: 100%;
     z-index: 97;

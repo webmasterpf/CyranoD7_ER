@@ -81,7 +81,10 @@ print render($content['field_fichier_joint']);
 print render($content['taxonomy_vocabulary_1']);
 ?>
 
-
+  <?php //inclusion d'une vue via php
+global $theme_path;
+include ($theme_path.'/includes/inc_vue_generik_tpl.php');
+?>
 
             <?php //region colonne C3
 global $theme_path;

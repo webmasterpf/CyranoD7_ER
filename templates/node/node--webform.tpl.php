@@ -36,9 +36,7 @@
 
     <?php endif; ?>
       <br clear="all"/>
-       <!-- Deco page-->
        
-    <?php  print $node->field_image_deco_lycee[0]['view'] /*Image deco page lycee*/ ?>
 
 <?php //region colonne C1
 global $theme_path;

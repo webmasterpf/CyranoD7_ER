@@ -324,3 +324,16 @@ LAYOUT POUR NODE.TPL WEBFORM
    
 }
 .colG3_webform{}
+/*---------------------------------------------------
+LAYOUT POUR RESULTAT RECHERCHE
+---------------------------------------------------*/
+
+#result-search{
+   border-left: 1px solid #E2001A;
+   border-right: 1px solid #00AAD2;
+    margin: 3px;
+   
+}
+#result-search h2{
+    padding: 5px;
+}

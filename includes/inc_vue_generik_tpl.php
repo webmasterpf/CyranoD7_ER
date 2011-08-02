@@ -5,9 +5,10 @@
  */
 
 ?>
+<h2>VERSION AVEC TITRE</h2>
 <?php
-/*
-$viewname = 'liste_annonce_accueil ';
+
+$viewname = 'liste_annonce_accueil';
 $view = views_get_view ($viewname);
 $view->set_display('block_2');
 
@@ -23,9 +24,9 @@ if ($view->result) {
 
 //Affiche la vue
 print render ($output);
-*/
-?>
 
+?>
+<h2> OU VERSION SIMPLE SANS TITRE</h2>
 <?php
 $viewName = 'liste_annonce_accueil';
 print views_embed_view($viewName,'block_2');

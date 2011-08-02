@@ -17,18 +17,13 @@
               <?php print render ($page ['content_top']); ?>
             </div>
               <?php endif; ?><!-- /#content-top -->
-              <!-- Si besoin de colonne sans node custom tpl
-<div id="left-content">
-              <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
-              <?php endif; ?>
-	 <?php if ($page ['left']): ?>
-            <?php print render ($page ['left']); ?>
-	<?php endif; ?>
-          </div>
-             	<!--fin du contenu gauche -->
+              
 
       <div id="content-inner" class="inner column center">
+
+          
+                
+
 
         <?php if ($messages || $tabs || $action_links): ?>
           <div id="content-header">
@@ -59,14 +54,7 @@
 
   
 
-    <!-- Si besoin de colonne sans node custom tpl
-    <?php if ($page ['right']): ?>
-        
-         <div id="right-content" class="colonne">
-            <?php print render ($page ['right']); ?>
-        </div>
-        <?php endif; ?>
-    <!-- /colonne-right -->
+   
 
  <br clear="all"/>
 	<!-- ______________________ CONTENU BAS _______________________ -->
