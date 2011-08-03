@@ -30,29 +30,19 @@
     <?php if ($search_results) : ?>
      <h1 class="title violet"><?php print t('Search results');?></h1>
 <?php else : ?>
-  <h2><?php print t('Your search yielded no results');?></h2>
+   <h1 class="title violet"><?php print t('Your search yielded no results');?></h1>
 <?php endif; ?>
 
 
-    
-
- 
-
 
       <br clear="all"/>
-   <h1 class="title violet"><?php print $title; ?></h1>
-
-
+  
 
 <?php //region colonne C1
 global $theme_path;
 include ($theme_path.'/includes/inc_region_col_C1.php');
 ?>
 
-
-  
-
-        
 </div>
 <!--______________COLONNE GAUCHE 2________________ -->
 <div id="result-search" class="col2_layout_200_570_200">
@@ -92,3 +82,4 @@ include ($theme_path.'/includes/inc_vue_generik_tpl.php');
 global $theme_path;
 include ($theme_path.'/includes/inc_region_col_C3.php');
 ?>
+</div>

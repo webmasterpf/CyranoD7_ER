@@ -10,6 +10,25 @@ http://drupal.org/node/1089656
 // */
 ?>
 <?php
+/*Pour retirer le formulaire de recherche de la page des résultats
+ * Selon : http://drupal.org/node/968002
+ */
+function cyrano_er_d7_page_alter(&$page) {
+  // This assumes everything being output in the "content" page region.
+
+  // Logged in
+  if (!empty($page['content']['system_main']['content']['search_form'])) {
+    unset($page['content']['system_main']['content']['search_form']);
+  }
+
+  // Not logged in
+  if (!empty($page['content']['system_main']['search_form'])) {
+    unset($page['content']['system_main']['search_form']);
+  }
+}
+
+
+
 /*
  * Here we override the default HTML output of drupal.
  * refer to http://drupal.org/node/550722

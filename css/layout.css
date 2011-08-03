@@ -37,7 +37,7 @@ body {
 	color: gray;
 }
 ul,li,dl,dd,dt{
-    list-style-position: inside;
+    list-style-position: inherit;
 }
  /*------------------------------------------------------*
   *--------    CSS BLOCS     						 ----*
@@ -336,4 +336,21 @@ LAYOUT POUR RESULTAT RECHERCHE
 }
 #result-search h2{
     padding: 5px;
+}
+ol.search-results{
+    padding: 1em;
+}
+
+li.search-result{
+    border-bottom: 1px solid #E2001A;
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 10px;
+    list-style-position: outside;
+}
+li.search-result a{
+    color: #E2001A;
+}
+li.search-result a:hover{
+    color: #93117E;
 }
