@@ -21,6 +21,12 @@
 #update-results li.failure strong {
   color: #b63300;
 }
+/*STYLES COMMUNS*/
+#contentMaintenance{
+    margin: 10px 0;
+    width: 570px;
+}
+
 /*STYLE MAINTENANCE OFFLINE*/
 #name-and-slogan-offline, #site-slogan-offline{
     background: #F29400;
@@ -43,4 +49,42 @@
 	color: #9898a6;
         height:50px;
         font-size: 11px;
+}
+/*STYLE MAINTENANCE */
+#name-and-slogan-maintenance, #site-slogan-maintenance{
+    background: #606070;
+    color: white;
+    padding: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+    border-radius: 5px;
+}
+#site-name-maintenance{
+    margin: 0;
+    padding: 15px;
+}
+#contentPage-maintenance{
+
+	margin:0 auto;
+	padding:10px 0;
+	width: 990px;
+	background-color:white;
+
+}
+#footer-maintenance{
+    margin:0 auto;
+	padding:5px 0;
+	width:980px;
+	background: white url(../images/bg_footer.jpg) no-repeat bottom right;
+	text-align: left;
+	color: #9898a6;
+        height:50px;
+        font-size: 11px;
+}
+#footer-maintenance a{
+    color: #606070;
+    text-decoration: none;
+}
+#footer-maintenance a:hover{
+    text-decoration: underline;
 }
